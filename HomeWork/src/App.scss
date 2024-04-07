@@ -1,0 +1,14 @@
+@import './scss/index';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.back-ground {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #27ee52, #6473ff);
+  @include flex(center, center);
+}
