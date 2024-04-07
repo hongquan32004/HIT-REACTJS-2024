@@ -5,6 +5,7 @@ import './Todoapp.scss'
 const Todoapp = () => {
     const [value, setValue] = useState("");
     const [task, setTask] = useState("");
+    const [editIndex, setEditIndex] = useState(null);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -18,13 +19,15 @@ const Todoapp = () => {
     const deleteTodos = (id) => {
         setTodos(todos.filter((index) => index !== id))
     }
-    const editTodos = (id) => {
-        setTodos(todos.map((index) => index === id ? { ...index, isEditing: !index.isEditing } : index));
-    };
-    const updateTodo = () => {
-        setTodos(todos, map((index) => index === id ? {
-            ...index, task, isEditing: !index.isEditing
-        } : index))
+    const editTodos = (index) => {
+        setEditIndex(index);
+        setTask(todos[index]);
+    }
+    const updateTodo = (id) => {
+        const updatedTodos = [...todos];
+        updatedTodos[id] = task;
+        setTodos(updatedTodos);
+        setEditIndex(null);
     };
 
 
@@ -38,9 +41,9 @@ const Todoapp = () => {
             </form>
             <div className="todo">
                 {todos.map((item, index) => (
-                    item.isEditing ? (
+                    editIndex === index ? (
                         <form action="input">
-                            <input type="text" value={task} placeholder="Update task......" onChange={(e) => setTask(e.target.value)} />
+                            <input type="text" value={task} autoComplete="off" placeholder="Update task......" onChange={(e) => setTask(e.target.value)} />
                             <button onClick={() => updateTodo(index)}>Update Task</button>
                         </form>
                     ) : (
@@ -48,7 +51,7 @@ const Todoapp = () => {
                             <p>{item}</p>
                             <div className="todo-icon">
                                 <i className="fa-solid fa-xmark" onClick={() => deleteTodos(item)}></i>
-                                <i className="fa-solid fa-pen" onClick={() => editTodos(item)}></i>
+                                <i className="fa-solid fa-pen" onClick={() => editTodos(index)}></i>
                             </div>
                         </div>)
                 ))}
