@@ -15,6 +15,14 @@
   @media screen and (max-width:768px) {
     .todo-wrapper {
       max-width: 350px;
+
+      form {
+        button {
+          border-radius: 4px;
+          margin-top: 7px;
+        }
+      }
     }
+
   }
 }
