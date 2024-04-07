@@ -5,6 +5,7 @@ import './Todoapp.scss'
 const Todoapp = () => {
     const [value, setValue] = useState("");
     const [task, setTask] = useState("");
+    const [editIndex, setEditIndex] = useState(null);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -21,10 +22,11 @@ const Todoapp = () => {
     const editTodos = (id) => {
         setTodos(todos.map((index) => index === id ? { ...index, isEditing: !index.isEditing } : index));
     };
-    const updateTodo = () => {
-        setTodos(todos, map((index) => index === id ? {
-            ...index, task, isEditing: !index.isEditing
-        } : index))
+    const updateTodo = (id) => {
+        const updatedTodos = [...todos];
+        updatedTodos[id] = task;
+        setTodos(updatedTodos);
+        setEditIndex(null);
     };
 
 
