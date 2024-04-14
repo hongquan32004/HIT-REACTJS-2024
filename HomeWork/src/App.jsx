@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.scss'
 import './scss/_index.scss'
 import Todoapp from './component/Todoapp/Todoapp'
+import Login from './component/Login/Login'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,7 +12,7 @@ function App() {
   return (
     <>
       <div className='back-ground'>
-        <Todoapp></Todoapp>
+        <Login></Login>
       </div>
     </>
   )

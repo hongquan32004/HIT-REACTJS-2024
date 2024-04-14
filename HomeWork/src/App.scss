@@ -7,22 +7,22 @@
 }
 
 .back-ground {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, #27ee52, #6473ff);
+  width: 100vw;
+  height: 100vh;
+  background: rgb(52, 218, 94);
   @include flex(center, center);
 
   @media screen and (max-width:768px) {
-    .todo-wrapper {
+    .login {
       max-width: 350px;
 
-      form {
-        button {
-          border-radius: 4px;
-          margin-top: 7px;
-        }
+      input {
+        max-width: 260px;
+      }
+
+      button {
+        max-width: 260px;
       }
     }
-
   }
 }
