@@ -1,0 +1,56 @@
+.login {
+    width: 500px;
+    height: 300px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+
+    .form-login {
+        input {
+            width: 300px;
+            height: 50px;
+            margin-bottom: 20px;
+            background: rgba(223, 221, 221, 0.536);
+            outline: none;
+            border: 1px solid transparent;
+            padding: 10px;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            width: 300px;
+            height: 50px;
+            background: rgb(52, 218, 94);
+            border: 1px solid transparent;
+            color: white;
+            font-size: 17px;
+            margin-bottom: 20px;
+            font-style: initial;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: rgb(29, 125, 53);
+        }
+
+        .card-a-login {
+            text-align: center;
+            font-size: 17px;
+
+            a:first-child {
+                text-decoration: none;
+                color: gray;
+            }
+
+            a:last-child {
+                text-decoration: none;
+                color: rgb(52, 218, 94);
+            }
+        }
+    }
+}
