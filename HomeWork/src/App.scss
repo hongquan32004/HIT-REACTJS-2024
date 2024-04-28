@@ -6,23 +6,4 @@
   box-sizing: border-box;
 }
 
-.back-ground {
-  width: 100vw;
-  height: 100vh;
-  background: rgb(52, 218, 94);
-  @include flex(center, center);
-
-  @media screen and (max-width:768px) {
-    .login {
-      max-width: 350px;
-
-      input {
-        max-width: 260px;
-      }
-
-      button {
-        max-width: 260px;
-      }
-    }
-  }
-}
+.back-ground {}
