@@ -1,0 +1,102 @@
+.backgroud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 100wh;
+    height: 100vh;
+
+    .login {
+        width: 450px;
+        height: 350px;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+
+
+        .form {
+
+            .auth-close {
+                position: absolute;
+                top: 11rem;
+                right: 33rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                background-color: #000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                cursor: pointer;
+                transition: all .3s linear;
+
+                a {
+                    color: #fff;
+                }
+
+
+            }
+
+            .auth-close:hover {
+                background: red;
+            }
+
+            .input {
+                width: 300px;
+                height: 50px;
+                margin-bottom: 30px;
+                background: rgba(223, 221, 221, 0.536);
+                outline: none;
+                border: 1px solid transparent;
+                padding: 10px;
+                font-size: 15px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .p {
+                position: absolute;
+                top: 55px;
+            }
+
+            .p2 {
+                position: absolute;
+                top: 130px;
+            }
+
+            .submit {
+                width: 300px;
+                height: 50px;
+                background: rgb(67, 128, 219);
+                border: 1px solid transparent;
+                color: white;
+                font-size: 17px;
+                margin-bottom: 20px;
+                font-style: initial;
+                cursor: pointer;
+            }
+
+            .submit:hover {
+                background: rgb(24, 52, 123);
+            }
+
+            .card-a-login {
+                text-align: center;
+                font-size: 17px;
+
+                a:first-child {
+                    text-decoration: none;
+                    color: gray;
+                }
+
+                a:last-child {
+                    text-decoration: none;
+                    color: rgb(49, 16, 240);
+                }
+            }
+        }
+    }
+}
