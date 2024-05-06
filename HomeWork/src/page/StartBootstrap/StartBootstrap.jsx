@@ -5,11 +5,13 @@ import AboutUs from "../AboutUs/AboutUs"
 import Contact from "../Contact/Contact"
 import Login from "../Login/Login"
 import SignUp from "../SignUp/SignUp"
+import { useNavigate, useParams } from "react-router-dom"
 
 const StartBootstrap = () => {
     const isactiveClassName = ({ isActive }) => {
         return isActive ? 'active' : '';
     };
+    const navigate = useNavigate();
 
 
     return (
@@ -17,7 +19,7 @@ const StartBootstrap = () => {
             <div className="startbootstrap-header">
                 <div className="startbootstrap-header-content">
                     <NavLink to="/" className={isactiveClassName}><h1>Start Bootstrap</h1></NavLink>
-                    <button><NavLink to="/login" className={isactiveClassName}>Login</NavLink></button>
+                    <button onClick={() => navigate("/login")}>Login</button>
                 </div>
             </div>
             <div className="startbootstrap-banner">

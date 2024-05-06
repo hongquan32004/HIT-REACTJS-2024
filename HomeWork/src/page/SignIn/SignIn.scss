@@ -1,0 +1,80 @@
+.signin {
+    .image {
+        width: 100vw;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .image-content {
+            width: 80%;
+
+            img {
+                width: 65.7px;
+                height: 40.34px;
+            }
+        }
+    }
+
+    .signin-content {
+        width: 100vw;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .form {
+            margin-top: -100px;
+            position: relative;
+
+            h1 {
+                font-weight: 400;
+                font-size: 64px;
+                letter-spacing: 0.5%;
+                line-height: 102.4px;
+                text-align: center;
+            }
+
+            label {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 25.6px;
+                letter-spacing: 0.5%;
+            }
+
+            .input {
+                width: 407px;
+                height: 50px;
+                border: 1px solid rgba(0, 0, 0, 1);
+                border-radius: 6px;
+                margin-bottom: 20px;
+            }
+
+
+            button {
+                width: 413px;
+                height: 53px;
+                border-radius: 50px;
+                background: rgba(156, 105, 226, 1);
+                color: white;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+
+            button:hover {
+                background: rgb(57, 23, 106);
+            }
+
+            .p1 {
+                position: absolute;
+                top: 183px;
+            }
+
+            .p2 {
+                position: absolute;
+                top: 278px;
+            }
+
+        }
+    }
+}
