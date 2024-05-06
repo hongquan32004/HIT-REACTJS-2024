@@ -1,0 +1,134 @@
+.profile {
+    width: 100vw;
+
+    .profile-content {
+        width: 100%;
+        display: flex;
+
+        .profile-content-left {
+            width: 20%;
+            height: 100vh;
+            background: rgba(217, 217, 217, 1);
+            display: flex;
+            justify-content: center;
+
+
+            .p-c-l-ct {
+                width: 80%;
+
+                .im {
+                    margin-top: 30px;
+                    text-align: center;
+
+                    img {
+                        width: 49px;
+                        height: 35px;
+
+                    }
+                }
+
+
+                h2 {
+
+                    cursor: pointer;
+                    margin-top: 30px;
+                }
+
+                h2:hover span {
+                    border-bottom: 2px solid black;
+
+                }
+            }
+
+        }
+    }
+
+    .profile-content-right {
+        width: 80%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 3rem 0;
+
+
+        .content-box {
+            width: 80%;
+            min-height: 80vh;
+
+            .content-event {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .input {
+                    display: flex;
+                    gap: 30px;
+
+                    input {
+                        width: 70%;
+                        height: 30px;
+                        border: 1px solid black;
+                        padding: 0 0.5rem;
+
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.add-new {
+    width: 130px;
+    height: 41.63px;
+    border-radius: 50px;
+    background: rgba(156, 105, 226, 1);
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(75, 93, 104, 0.1);
+    border: 0;
+}
+
+table {
+
+    border-collapse: collapse;
+    table-layout: auto;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    margin: 0.75rem 0;
+    background: rgba(161, 157, 157, 0.34);
+
+    th {
+        margin-bottom: 5px;
+        border: 1px solid black;
+    }
+
+    tr,
+    td {
+
+        border: 1px solid black;
+
+    }
+
+    thead {
+        bottom: 30px;
+        background: gray;
+
+        tr {
+            border-bottom: 10px solid white;
+
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                border-top: 1px solid #000000;
+            }
+        }
+    }
+}

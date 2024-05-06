@@ -10,19 +10,39 @@ import AboutUs from './page/AboutUs/AboutUs'
 import Login from './page/Login/Login'
 import SignUp from './page/SignUp/SignUp'
 import Contact from './page/Contact/Contact'
+import Home from './page/Home/Home'
+import Products from './page/product/Product'
+import DetailProducts from './page/DetailProducts/DetailProducts'
+import SignIn from './page/SignIn/SignIn'
+import HomeD9 from './page/HomeD9/HomeD9'
+import Profile from './page/Profile/Profile'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      {/* <nav>
+        <ul>
+          <li><NavLink to='/'>Home</NavLink></li>
+          <li><NavLink to='/Product'>Product</NavLink></li>
+
+        </ul>
+      </nav>
       <Routes>
-        <Route path='/' element={<StartBootstrap />} />
-        <Route path='/about-us' element={<AboutUs />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/login' element={<Login />} />
-        <Route path="/register" element={<SignUp />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/Product' element={<Products />} >
+          <Route path=':id' element={<DetailProducts />} />
+        </Route>
+
+      </Routes> */}
+
+      <Routes>
+        <Route path='/' element={<HomeD9 />} />
+        <Route path='/sign-in' element={<SignIn />} />
+        <Route path='/profile' element={<Profile />} />
       </Routes>
+
     </>
   )
 }

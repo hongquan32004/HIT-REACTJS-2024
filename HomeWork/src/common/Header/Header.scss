@@ -1,0 +1,42 @@
+.header {
+    width: 100vw;
+    height: 59.63px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    .header-content {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-logo {
+            width: 48.7px;
+            height: 34.78px;
+        }
+
+        .header-button {
+            width: 300px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        button {
+            width: 130px;
+            height: 41.63px;
+            border-radius: 50px;
+            background: rgba(156, 105, 226, 1);
+            color: white;
+            cursor: pointer;
+            box-shadow: rgba(75, 93, 104, 0.1);
+            border: 0;
+        }
+
+        button:hover {
+            background: rgb(46, 20, 82);
+        }
+
+    }
+}
