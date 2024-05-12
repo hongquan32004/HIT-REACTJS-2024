@@ -16,33 +16,25 @@ import DetailProducts from './page/DetailProducts/DetailProducts'
 import SignIn from './page/SignIn/SignIn'
 import HomeD9 from './page/HomeD9/HomeD9'
 import Profile from './page/Profile/Profile'
+import CountUseReducer from './page/CountUseReducer/CountUseReducer'
+import TodoApp from './page/TodoApp/TodoApp'
+import { useNavigate } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0)
 
+  const navigate = useNavigate();
+
   return (
     <>
-      {/* <nav>
-        <ul>
-          <li><NavLink to='/'>Home</NavLink></li>
-          <li><NavLink to='/Product'>Product</NavLink></li>
-
-        </ul>
-      </nav>
+      <div>
+        <button style={{ cursor: 'pointer', marginRight: '10px' }} onClick={() => navigate("/count")}>COUNT</button>
+        <button style={{ cursor: 'pointer' }} onClick={() => navigate("/todoapp")}>TODO-APP</button >
+      </div>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/Product' element={<Products />} >
-          <Route path=':id' element={<DetailProducts />} />
-        </Route>
-
-      </Routes> */}
-
-      <Routes>
-        <Route path='/' element={<HomeD9 />} />
-        <Route path='/sign-in' element={<SignIn />} />
-        <Route path='/profile' element={<Profile />} />
+        <Route path='/count' element={<CountUseReducer />} />
+        <Route path='/todoapp' element={<TodoApp />} />
       </Routes>
-
     </>
   )
 }
