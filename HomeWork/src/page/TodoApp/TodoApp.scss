@@ -1,0 +1,23 @@
+.todoapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+
+    input {
+        width: 300px;
+        padding: 10px;
+    }
+
+    button {
+        margin: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    li {
+        margin: 8px 0;
+    }
+}
