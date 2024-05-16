@@ -18,23 +18,22 @@ import HomeD9 from './page/HomeD9/HomeD9'
 import Profile from './page/Profile/Profile'
 import CountUseReducer from './page/CountUseReducer/CountUseReducer'
 import TodoApp from './page/TodoApp/TodoApp'
-import { useNavigate } from "react-router-dom";
+import useStore from './hooks/useStore'
+import { actions } from './store'
+
 
 function App() {
   const [count, setCount] = useState(0)
 
-  const navigate = useNavigate();
+  const [state, dispatch] = useStore();
+  console.log(state);
+
 
   return (
     <>
       <div>
-        <button style={{ cursor: 'pointer', marginRight: '10px' }} onClick={() => navigate("/count")}>COUNT</button>
-        <button style={{ cursor: 'pointer' }} onClick={() => navigate("/todoapp")}>TODO-APP</button >
+        <input type="text" value={state.todoInput} onChange={(e) => dispatch(actions.setInputTodo(e.target.value))} />
       </div>
-      <Routes>
-        <Route path='/count' element={<CountUseReducer />} />
-        <Route path='/todoapp' element={<TodoApp />} />
-      </Routes>
     </>
   )
 }
