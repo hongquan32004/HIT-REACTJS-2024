@@ -32,7 +32,7 @@ function App() {
   return (
     <>
       <div>
-        <input type="text" value={state.todoInput} onChange={(e) => dispatch(actions.setInputTodo(e.target.value))} />
+        <TodoApp></TodoApp>
       </div>
     </>
   )
