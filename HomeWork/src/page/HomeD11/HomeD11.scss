@@ -1,0 +1,91 @@
+.homed11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+    .homed11-card {
+        width: 500px;
+        height: 350px;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        /* Màu đen đậm hơn cho viền */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        /* Bóng đậm hơn */
+        border-radius: 10px;
+
+        .homed11-card-content-up {
+            width: 100%;
+
+            height: 70%;
+            border-bottom: 2px solid gray;
+
+            .content-up-img {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                padding-top: 20px;
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                }
+            }
+
+            .content-up-link {
+                display: grid;
+                grid-template-columns: auto;
+                align-items: center;
+                padding-top: 30px;
+
+                .link-item {
+                    margin: auto;
+                    padding-top: 10px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 60%;
+
+                    i {
+                        font-size: 20px;
+                        color: gray;
+                    }
+
+                    span {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+
+        .homed11-card-content-down {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 30%;
+
+            h2 {
+                color: rgb(36, 127, 254);
+            }
+
+            .content-down-i {
+                a {
+                    padding: 10px;
+                    text-decoration: none;
+
+
+                    i {
+                        font-size: 25px;
+                        color: rgb(36, 127, 254);
+                    }
+
+                    i:hover {
+                        color: rgb(12, 12, 123);
+                    }
+                }
+            }
+        }
+    }
+}

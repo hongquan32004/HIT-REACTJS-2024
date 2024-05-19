@@ -19,22 +19,28 @@ import Profile from './page/Profile/Profile'
 import CountUseReducer from './page/CountUseReducer/CountUseReducer'
 import TodoApp from './page/TodoApp/TodoApp'
 import { useNavigate } from "react-router-dom";
+import HeaderD11 from './common/HeaderD11/HeaderD11'
+import Login1 from './component/Login1/Login1'
+import Layout from './layouts/Layout'
+import HomeD11 from './page/HomeD11/HomeD11'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  const navigate = useNavigate();
 
   return (
     <>
-      <div>
-        <button style={{ cursor: 'pointer', marginRight: '10px' }} onClick={() => navigate("/count")}>COUNT</button>
-        <button style={{ cursor: 'pointer' }} onClick={() => navigate("/todoapp")}>TODO-APP</button >
-      </div>
       <Routes>
-        <Route path='/count' element={<CountUseReducer />} />
-        <Route path='/todoapp' element={<TodoApp />} />
+        <Route path='/' element={<Layout />}>
+          <Route path='/' element={<HomeD11 />} />
+          <Route path='/start-bootstrap' element={<StartBootstrap />} />
+          <Route path='/todo-app' element={<TodoApp />} />
+          <Route path='/login1' element={<Login1 />} />
+          <Route path='/about-us' element={<AboutUs />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/login' element={<Login />} />
+          <Route path="/register" element={<SignUp />} />
+        </Route>
       </Routes>
+
     </>
   )
 }

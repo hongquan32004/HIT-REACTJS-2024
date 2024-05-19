@@ -128,9 +128,9 @@ const StartBootstrap = () => {
                         <p class="p-desc">© Your Website 2023. All Rights Reserved.</p>
                     </div>
                     <div className="content-right">
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-instagram"></i>
+                        <i className="fa-brands fa-facebook"></i>
+                        <i className="fa-brands fa-twitter"></i>
+                        <i className="fa-brands fa-instagram"></i>
                     </div>
                 </div>
             </div>
