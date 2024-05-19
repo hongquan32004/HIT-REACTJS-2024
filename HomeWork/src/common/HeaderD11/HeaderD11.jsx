@@ -20,7 +20,7 @@ const HeaderD11 = () => {
                         <li>
                             <div onClick={() => dispatch(actions.setTheme())}>
                                 {!theme ? (
-                                    <i className="fa-solid fa-sun" style={{ color: 'yellow' }}></i>
+                                    <i className="fa-solid fa-sun" style={{ color: 'rgb(242, 63, 22)' }}></i>
                                 ) : (
                                     <i className="fa-solid fa-moon"></i>
                                 )}
