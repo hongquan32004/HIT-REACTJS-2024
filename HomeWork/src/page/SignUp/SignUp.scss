@@ -18,10 +18,12 @@
 
 
         .form {
+            position: relative;
+
             .auth-close {
                 position: absolute;
-                top: 11rem;
-                right: 33rem;
+                top: -4rem;
+                right: -6rem;
                 width: 2.5rem;
                 height: 2.5rem;
                 border-radius: 50%;

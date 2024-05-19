@@ -28,7 +28,7 @@ const Login = () => {
                 >
                     {({ errors, touched }) => (
                         <Form className="form">
-                            <div class="auth-close"><NavLink to="/"><i class="fa-solid fa-xmark"></i></NavLink></div>
+                            <div class="auth-close"><NavLink to="/start-bootstrap"><i class="fa-solid fa-xmark"></i></NavLink></div>
                             <Field className="input" type="text" name="email" id="email" placeholder="email" />
                             {errors.email && touched.email && (<p className="p" style={{ color: 'red', fontSize: '15px' }}>{errors.email}</p>)}
                             <br />
