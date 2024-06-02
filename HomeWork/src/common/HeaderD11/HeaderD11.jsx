@@ -2,7 +2,7 @@ import React from "react";
 import './HeaderD11.scss'
 import { useNavigate } from "react-router-dom";
 import useStore from "../../hooks/useStore";
-import { actions } from "../../store";
+import { actions } from "../../storeContext";
 const HeaderD11 = () => {
     const navigate = useNavigate();
     const [{ theme }, dispatch] = useStore();

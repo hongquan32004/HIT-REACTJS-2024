@@ -23,24 +23,28 @@ import HeaderD11 from './common/HeaderD11/HeaderD11'
 import Login1 from './component/Login1/Login1'
 import Layout from './layouts/Layout'
 import HomeD11 from './page/HomeD11/HomeD11'
+import { store } from './store'
+
+import { useDispatch, useSelector } from 'react-redux'
+import { decrementCounter, divisionCounter, factorialCounter, incremantCounter, multiplicationCounter } from './store/CounterSlice'
 
 function App() {
+  const [input, setInput] = useState();
+  const count = useSelector((state) => {
+    console.log(state);
+    return state.counterReducer.count;
+  })
 
+  const dispatch = useDispatch();
   return (
     <>
-      <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route path='/' element={<HomeD11 />} />
-          <Route path='/start-bootstrap' element={<StartBootstrap />} />
-          <Route path='/todo-app' element={<TodoApp />} />
-          <Route path='/login1' element={<Login1 />} />
-          <Route path='/about-us' element={<AboutUs />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/login' element={<Login />} />
-          <Route path="/register" element={<SignUp />} />
-        </Route>
-      </Routes>
-
+      <h1>{count}</h1>
+      <button onClick={() => dispatch(incremantCounter())}>Tăng</button>
+      <button onClick={() => dispatch(decrementCounter())}>Giảm</button>
+      <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
+      <button onClick={() => dispatch(multiplicationCounter(input))}>Nhân</button>
+      <button onClick={() => dispatch(divisionCounter(input))}>Chia</button>
+      <button onClick={() => dispatch(factorialCounter())}>Giai thừa</button>
     </>
   )
 }
