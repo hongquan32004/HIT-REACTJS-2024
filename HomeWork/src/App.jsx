@@ -24,27 +24,30 @@ import Login1 from './component/Login1/Login1'
 import Layout from './layouts/Layout'
 import HomeD11 from './page/HomeD11/HomeD11'
 import { store } from './store'
-
 import { useDispatch, useSelector } from 'react-redux'
 import { decrementCounter, divisionCounter, factorialCounter, incremantCounter, multiplicationCounter } from './store/CounterSlice'
+import Soqe from './page/Soqe/Soqe'
+import QuarticEquations from './page/QuarticEquations/QuarticEquations.jsx'
+
 
 function App() {
-  const [input, setInput] = useState();
-  const count = useSelector((state) => {
-    console.log(state);
-    return state.counterReducer.count;
-  })
 
-  const dispatch = useDispatch();
   return (
     <>
-      <h1>{count}</h1>
+      {/* <h1>{count}</h1>
       <button onClick={() => dispatch(incremantCounter())}>Tăng</button>
       <button onClick={() => dispatch(decrementCounter())}>Giảm</button>
       <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
       <button onClick={() => dispatch(multiplicationCounter(input))}>Nhân</button>
       <button onClick={() => dispatch(divisionCounter(input))}>Chia</button>
-      <button onClick={() => dispatch(factorialCounter())}>Giai thừa</button>
+      <button onClick={() => dispatch(factorialCounter())}>Giai thừa</button> */}
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route path='card' element={<HomeD11 />} />
+          <Route path='soqe' element={<Soqe />} />
+          <Route path='qe' element={<QuarticEquations />} />
+        </Route>
+      </Routes>
     </>
   )
 }
