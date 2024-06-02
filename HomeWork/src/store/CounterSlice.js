@@ -26,9 +26,7 @@ export const counterSlice = createSlice({
                 state.count *= i;
             }
         },
-        hephuongtrinhbac1: (state,actions) => {
-            
-        }
+
     }
 })
 
