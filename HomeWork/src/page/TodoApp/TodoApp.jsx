@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react'
 import './TodoApp.scss'
 import useStore from '../../hooks/useStore'
-import { actions } from '../../store'
+import { actions } from '../../storeContext'
 import { ADD_TODO } from '../../constants/storeConstant'
 
 
